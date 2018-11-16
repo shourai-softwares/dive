@@ -9,11 +9,13 @@ class VisibleObject;
 class FileManager {
     public:
         ~FileManager();
+
         void openDir(std::string dirName);
+
         static std::string* readFile(std::string filePath);
 
-    private:
         std::list<VisibleObject*> objects;
+    private:
 };
 
 #endif

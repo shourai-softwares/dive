@@ -21,11 +21,11 @@ void FileManager::openDir(std::string dirName) {
     struct dirent *object;
 
     directory = opendir(dirName.c_str());
-    if(directory == NULL) {
+    if(directory == nullptr) {
         throw 20;
     }
 
-    while((object = readdir(directory)) != NULL) {
+    while((object = readdir(directory)) != nullptr) {
         switch(object->d_type) {
             case DT_REG:
                 this->objects.push_back(new FileObject(object));

@@ -1,6 +1,9 @@
 #ifndef __VISIBLE_OBJECT_H__
 #define __VISIBLE_OBJECT_H__
 
+#include <string>
+#include <dirent.h>
+
 class VisibleObject {
     public:
         VisibleObject(struct dirent *entity) {
