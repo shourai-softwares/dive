@@ -3,16 +3,19 @@
 
 #include <string>
 #include <dirent.h>
+#include <GL/glew.h>
+#include "Asset.h"
 
 class VisibleObject {
     public:
-        VisibleObject(struct dirent *entity) {
-            name = entity->d_name;
-            x = y = z = 0;
-        }
+        explicit VisibleObject(struct dirent *entity);
+        std::vector<GLfloat> getVertices();
 
         std::string name;
         int x, y, z;
+
+    private:
+        Asset asset;
 };
 
 #endif

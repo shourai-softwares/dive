@@ -17,4 +17,4 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 file(GLOB SOURCES "src/*.cpp")
 
 add_executable(dive ${SOURCES})
-target_link_libraries(dive glfw GLEW ${OPENGL_LIBRARY})
+target_link_libraries(dive glfw GLEW tinyobjloader ${OPENGL_LIBRARY})
