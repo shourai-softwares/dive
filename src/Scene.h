@@ -12,8 +12,6 @@ class Scene {
         GLfloat* getBackgroundColor();
 
     private:
-        std::list<VisibleObject> sceneObjects;
-
         int numCoords;
         int objectTotal;
         GLuint vertexObject;

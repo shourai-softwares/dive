@@ -14,7 +14,7 @@ bool Asset::loadAsset(std::string assetName) {
         &this->materials,
         &warn,
         &err,
-        "./models/Rock/Rock_6.OBJ"
+        path.c_str()
     );
 
     if (!warn.empty()) {
@@ -48,7 +48,6 @@ std::vector<GLfloat> Asset::getVertices() {
                 model.push_back(vx);
                 model.push_back(vy);
                 model.push_back(vz);
-                model.push_back(-1.0f);
             }
             index_offset += fv;
 

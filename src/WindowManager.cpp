@@ -74,16 +74,16 @@ void WindowManager::run(GLuint program) {
         );
         glm::vec3 up = glm::cross( right, direction );
 
-        if (glfwGetKey(this->window, GLFW_KEY_UP) == GLFW_PRESS){
+        if (glfwGetKey(this->window, GLFW_KEY_W) == GLFW_PRESS){
             position += direction * deltaTime * speed;
         }
-        if (glfwGetKey(this->window, GLFW_KEY_DOWN) == GLFW_PRESS){
+        if (glfwGetKey(this->window, GLFW_KEY_S) == GLFW_PRESS){
             position -= direction * deltaTime * speed;
         }
-        if (glfwGetKey(this->window, GLFW_KEY_RIGHT) == GLFW_PRESS){
+        if (glfwGetKey(this->window, GLFW_KEY_D) == GLFW_PRESS){
             position += right * deltaTime * speed;
         }
-        if (glfwGetKey(this->window, GLFW_KEY_LEFT) == GLFW_PRESS){
+        if (glfwGetKey(this->window, GLFW_KEY_A) == GLFW_PRESS){
             position -= right * deltaTime * speed;
         }
 
@@ -99,6 +99,7 @@ void WindowManager::run(GLuint program) {
         glfwPollEvents();
 
         glClearBufferfv(GL_COLOR, 0, scene.getBackgroundColor());
+        glClear(GL_DEPTH_BUFFER_BIT);
     }
     scene.unload();
 
