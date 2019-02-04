@@ -1,6 +1,8 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
 # File Created: 12.03.2016 23:28:17
 
+mtllib Rock_6.mtl
+
 #
 # object Rock_6
 #
